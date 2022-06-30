@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>12102_portfolio_landing_page</title>
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <!--Glide-->
+    <link rel="stylesheet" href="assets/css/glide.core.min.css" />
+    <!-- Custom Css-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <style>
+    .contain {
+      background-color: #eee;
+      max-width: 1170px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1em;
+    }
+
+    div.form {
+      background-color: #eee;
+    }
+    .contact-wrapper {
+      margin: auto 0;
+    }
+
+    .submit-btn {
+      float: left;
+    }
+    .reset-btn {
+      float: right;
+    }
+
+    .form-headline:after {
+      content: "";
+      display: block;
+      width: 10%;
+      padding-top: 10px;
+      border-bottom: 3px solid #ec1c24;
+    }
+
+    .highlight-text {
+      color: #ec1c24;
+    }
+
+    .hightlight-contact-info {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+    .highlight-text-grey {
+      font-weight: 500;
+    }
+
+    .email-info {
+      margin-top: 20px;
+    }
+
+    ::-webkit-input-placeholder {
+      /* Chrome */
+      font-family: "Roboto", sans-serif;
+    }
+
+    .required-input {
+      color: black;
+    }
+    @media (min-width: 600px) {
+      .contain {
+        padding: 0;
+      }
+    }
+
+    h3,
+    ul {
+      margin: 0;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    .form-input:focus,
+    textarea:focus {
+      outline: 1.5px solid #ec1c24;
+    }
+
+    .form-input,
+    textarea {
+      width: 100%;
+      border: 1px solid #bdbdbd;
+      border-radius: 5px;
+    }
+
+    .wrapper > * {
+      padding: 1em;
+    }
+    @media (min-width: 700px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+      }
+      .wrapper > * {
+        padding: 2em 2em;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contacts {
+      color: #212d31;
+    }
+
+    .form {
+      background: #fff;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+    form label {
+      display: block;
+    }
+    form p {
+      margin: 0;
+    }
+
+    .full-width {
+      grid-column: 1 / 3;
+    }
+
+    button,
+    .submit-btn,
+    .form-input,
+    textarea {
+      padding: 1em;
+    }
+
+    button,
+    .submit-btn {
+      background: transparent;
+      border: 1px solid #ec1c24;
+      color: #ec1c24;
+      border-radius: 15px;
+      padding: 5px 20px;
+      text-transform: uppercase;
+    }
+    button:hover,
+    .submit-btn:hover,
+    button:focus,
+    .submit-btn:focus {
+      background: #ec1c24;
+      outline: 0;
+      color: #eee;
+    }
+    .error {
+      color: #ec1c24;
+    }
+  </style>
+
+  <body>
+    <!--header portfolio wrapper -->
+    <header class="_header_portfolio_wrapper">
+      <nav
+        class="navbar navbar-expand-lg navbar-light _header_portfolio_navbar"
+      >
+        <div class="container">
+          <div class="_header_logo">
+            <a class="navbar-brand _logo" href="#">
+              <span class="fletter">T</span>URJA
+            </a>
+          </div>
+          <button
+            class="navbar-toggler _toggler _nav_bg_color"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse _header_portfolio_nav"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav _header_portfolio_nav_ul ms-auto">
+              <li class="nav-item dropdown _header_portfolio_nav_li">
+                <a href="#0" class="_header_portfolio_nav_item">Home</a>
+              </li>
+              <li class="nav-item dropdown _header_portfolio_nav_li">
+                <a href="#about" class="_header_portfolio_nav_item">About</a>
+              </li>
+              <li class="nav-item dropdown _header_portfolio_nav_li">
+                <a href="#services" class="_header_portfolio_nav_item"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item dropdown _header_portfolio_nav_li">
+                <a href="#testimonial" class="_header_portfolio_nav_item"
+                  >Testimonial</a
+                >
+              </li>
+              <li class="nav-item dropdown _header_portfolio_nav_li">
+                <a href="#contact" class="_header_portfolio_nav_item"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="_header_portfolio_content_wrap" id="about">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+              <div class="_header_portfolio_contents">
+                <div class="_header_portfolio_content">
+                  <h1 class="_header_portfolio_content_txt1">Hi! I’m Turja.</h1>
+                  <h4 class="_header_portfolio_content_txt2">
+                    I design interfaces that inspire users.
+                  </h4>
+                  <p class="_header_portfolio_content_para">
+                    I’m Turja Sen, a product designer based in
+                    Sylhet,Bangladesh. I create user-friendly interfaces for
+                    fast-growing startups.
+                  </p>
+                </div>
+                <div class="_header_portfolio_content_btns">
+                  <div class="_header_portfolio_content_btn1">
+                    <a
+                      href="#contact"
+                      class="_header_portfolio_content_btn1_contact"
+                      >Contact Me</a
+                    >
+                  </div>
+                  <div class="_header_portfolio_content_btn2">
+                    <a
+                      href="assets/file/Turja.pdf"
+                      class="_header_portfolio_content_btn2_download"
+                      download
+                      >Download CV
+                      <span class="_header_portfolio_content_btn1_ic">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          fill="none"
+                          viewBox="0 0 14 14"
+                        >
+                          <path
+                            stroke="#130F26"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6.92 8.86V.834M8.864 6.91L6.92 8.862 4.976 6.91"
+                          />
+                          <path
+                            stroke="#130F26"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M9.914 3.84c2.386.22 3.253 1.112 3.253 4.666 0 4.733-1.54 4.733-6.167 4.733s-6.166 0-6.166-4.733c0-3.554.866-4.447 3.253-4.667"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+              <div class="_header_portfolio_content_r8">
+                <img
+                  src="assets/img/turjo.jpg"
+                  alt="image"
+                  class="_header_portfolio_content_r8_img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--header portfolio wrapper -->
+    <!--about us portfolio wrapper -->
+    <section class="_about_us_portfolio_wrapper" id="services">
+      <div class="_about_us_portfolio_wrap">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+              <div class="_about_us_portfolio_head_txt">
+                <h2 class="_about_us_portfolio_head_txt1">
+                  Why Hire Me For Your Next Projects ? I am Available
+                </h2>
+              </div>
+            </div>
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 ms-auto">
+              <div class="_about_us_portfolio_head_cont">
+                <p class="_about_us_portfolio_head_cont_para">
+                  I am
+                  <span class="_about_us_portfolio_head_cont_sp"
+                    >Turja Sen Das</span
+                  >, I am a
+                  <span class="_about_us_portfolio_head_cont_sp"
+                    >UX/UI Designer</span
+                  >, and I’m very passionate and desicated to my work. With 3
+                  years experience as a professional graphic designer, I have
+                  acquired the skills and knowledge necessary to make your
+                  project a success.
+                </p>
+                <p class="_about_us_portfolio_head_cont_para1">
+                  turjoui01@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 mx-auto">
+              <div class="row justify-content-center">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                  <div class="_about_us_portfolio_card">
+                    <div class="_about_us_portfolio_card_inner">
+                      <div class="_about_us_portfolio_card_img">
+                        <img
+                          src="assets/img/about-icon1.png"
+                          alt="icon"
+                          class="_about_us_portfolio_card_ic"
+                        />
+                      </div>
+                      <div class="_about_us_portfolio_card_cont">
+                        <h5 class="_about_us_portfolio_card_cont_txt">
+                          Design
+                        </h5>
+                        <p class="_about_us_portfolio_card_cont_para">
+                          I'll help you solve complex business problems through
+                          simple, user-friendly design. Leverage the power of
+                          design research to grow. .
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                  <div class="_about_us_portfolio_card">
+                    <div class="_about_us_portfolio_card_inner">
+                      <div class="_about_us_portfolio_card_img">
+                        <img
+                          src="assets/img/about-icon2.png"
+                          alt="icon"
+                          class="_about_us_portfolio_card_ic"
+                        />
+                      </div>
+                      <div class="_about_us_portfolio_card_cont">
+                        <h5 class="_about_us_portfolio_card_cont_txt">
+                          Branding
+                        </h5>
+                        <p class="_about_us_portfolio_card_cont_para">
+                          I'll help you solve complex business problems through
+                          simple, user-friendly design. Leverage the power of
+                          design research to grow. .
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                  <div class="_about_us_portfolio_card">
+                    <div class="_about_us_portfolio_card_inner">
+                      <div class="_about_us_portfolio_card_img">
+                        <img
+                          src="assets/img/about-icon3.png"
+                          alt="icon"
+                          class="_about_us_portfolio_card_ic"
+                        />
+                      </div>
+                      <div class="_about_us_portfolio_card_cont">
+                        <h5 class="_about_us_portfolio_card_cont_txt">
+                          Product design
+                        </h5>
+                        <p class="_about_us_portfolio_card_cont_para">
+                          I'll help you solve complex business problems through
+                          simple, user-friendly design. Leverage the power of
+                          design research to grow. .
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-12 xol-lg-12 col-md-12 col-sm-12">
+                  <div class="_about_us_portfolio_card_links"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---about us portfolio wrapper end -->
+    <!---feature portfolio wrapper -->
+    <section class="_feature_portfolio_wrapper" id="testimonial">
+      <div class="_feature_portfolio_wrap">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <div class="_feature_portfolio_head">
+                <div class="_feature_portfolio_head_txt">
+                  <h3 class="_feature_portfolio_head_txt1">
+                    My Latest Featured Projects
+                  </h3>
+                </div>
+              </div>
+              <div class="_feature_portfolio_choose_btns">
+                <ul
+                  class="_feature_portfolio_choose_btns_ul nav nav-pills"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li
+                    class="nav-item _feature_portfolio_choose_btn_li"
+                    role="presentation"
+                  >
+                    <button
+                      type="button"
+                      id="pills-all-tab"
+                      class="_feature_portfolio_choose_btn_tag nav-link active"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-all"
+                      role="tab"
+                      aria-controls="pills-all"
+                      aria-selected="true"
+                    >
+                      ALL
+                    </button>
+                  </li>
+                  <li
+                    class="nav-item _feature_portfolio_choose_btn_li"
+                    role="presentation"
+                  >
+                    <button
+                      type="button"
+                      id="pills-landing-tab"
+                      class="_feature_portfolio_choose_btn_tag nav-link"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-landing"
+                      role="tab"
+                      aria-controls="pills-landing"
+                      aria-selected="false"
+                    >
+                      LANDING PAGE
+                    </button>
+                  </li>
+                  <li
+                    class="nav-item _feature_portfolio_choose_btn_li"
+                    role="presentation"
+                  >
+                    <button
+                      type="button"
+                      id="pills-illustration-tab"
+                      class="_feature_portfolio_choose_btn_tag nav-link"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-illustration"
+                      role="tab"
+                      aria-controls="pills-illustration"
+                      aria-selected="false"
+                    >
+                      ILLUSTRATION
+                    </button>
+                  </li>
+                  <li
+                    class="nav-item _feature_portfolio_choose_btn_li"
+                    role="presentation"
+                  >
+                    <button
+                      type="button"
+                      id="pills-mobile-tab"
+                      class="_feature_portfolio_choose_btn_tag nav-link"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-mobile"
+                      role="tab"
+                      aria-controls="pills-mobile"
+                      aria-selected="false"
+                    >
+                      MOBILE APP
+                    </button>
+                  </li>
+                  <li
+                    class="nav-item _feature_portfolio_choose_btn_li"
+                    role="presentation"
+                  >
+                    <button
+                      type="button"
+                      id="pills-icon-tab"
+                      class="_feature_portfolio_choose_btn_tag nav-link"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-icon"
+                      role="tab"
+                      aria-controls="pills-icon"
+                      aria-selected="false"
+                    >
+                      ICON
+                    </button>
+                  </li>
+                  <li
+                    class="nav-item _feature_portfolio_choose_btn_li"
+                    role="presentation"
+                  >
+                    <button
+                      type="button"
+                      id="pills-web-tab"
+                      class="_feature_portfolio_choose_btn_tag nav-link"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-web"
+                      role="tab"
+                      aria-controls="pills-web"
+                      aria-selected="false"
+                    >
+                      WEB APP
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 mx-auto">
+              <div class="tab-content" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active _feature_portfolio_card_wrap"
+                  id="pills-all"
+                  role="tabpanel"
+                  aria-labelledby="pills-all-tab"
+                >
+                  <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/1.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Isometric illustration
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/2.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Icon Pack
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/3.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Landing Page
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/4.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Mobile App
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/5.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Web App
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/6.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Virtual Reality Illustration
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade _feature_portfolio_card_wrap"
+                  id="pills-landing"
+                  role="tabpanel"
+                  aria-labelledby="pills-landing-tab"
+                >
+                  <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/3.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Landing Page
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/4.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Mobile App
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/5.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Web App
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade _feature_portfolio_card_wrap"
+                  id="pills-illustration"
+                  role="tabpanel"
+                  aria-labelledby="pills-illustration-tab"
+                >
+                  <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/1.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Isometric illustration
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/6.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Virtual Reality Illustration
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade _feature_portfolio_card_wrap"
+                  id="pills-mobile"
+                  role="tabpanel"
+                  aria-labelledby="pills-mobile-tab"
+                >
+                  <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/4.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Mobile App
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/5.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Web App
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade _feature_portfolio_card_wrap"
+                  id="pills-icon"
+                  role="tabpanel"
+                  aria-labelledby="pills-icon-tab"
+                >
+                  <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/2.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Icon Pack
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/4.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Mobile App
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade _feature_portfolio_card_wrap"
+                  id="pills-web"
+                  role="tabpanel"
+                  aria-labelledby="pills-web-tab"
+                >
+                  <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/5.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Web App
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                      <div class="_feature_portfolio_card">
+                        <div class="_feature_portfolio_card_img">
+                          <img
+                            src="assets/img/4.png"
+                            alt="image"
+                            class="_feature_portfolio_card_img_tag"
+                          />
+                        </div>
+                        <div class="_feature_portfolio_card_content">
+                          <h6 class="_feature_portfolio_card_content_txt">
+                            Mobile App
+                          </h6>
+                          <p class="_feature_portfolio_card_content_para">
+                            Client Project
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-12 xol-lg-12 col-md-12 col-sm-12"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---feature portfolio wrapper end -->
+
+    <!---testimonial portfolio wrapper-->
+    <section class="_testimonial_portfolio_wrapper">
+      <div class="_testimonial_portfolio_wrap">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
+              <div class="_testimonail_portfolio_head">
+                <div class="_testimonail_portfolio_head_txt">
+                  <h3 class="_testimonail_portfolio_head_txt1">
+                    Customer Story
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="_testimonial_slider">
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="_testimonial_portfolio_slider_btn">
+                  <div class="glide__arrows" data-glide-el="controls">
+                    <button
+                      class="glide__arrow glide__arrow--left _testimonial_prev_arrow"
+                      data-glide-dir="<"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="18"
+                        fill="none"
+                        viewBox="0 0 30 18"
+                      >
+                        <path
+                          fill="#F64D5E"
+                          fill-rule="evenodd"
+                          d="M10.7.527a1.93 1.93 0 00-2.65 0l-7.5 7.2a1.75 1.75 0 000 2.546l7.5 7.2a1.93 1.93 0 002.65 0 1.75 1.75 0 000-2.546L6.403 10.8h21.723C29.16 10.8 30 9.994 30 9s-.84-1.8-1.875-1.8H6.402L10.7 3.073a1.75 1.75 0 000-2.546z"
+                          clip-rule="evenodd"
+                          opacity=".3"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      class="glide__arrow glide__arrow--right _testimonial_next_arrow"
+                      data-glide-dir=">"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="18"
+                        fill="none"
+                        viewBox="0 0 30 18"
+                      >
+                        <path
+                          fill="#F64D5E"
+                          fill-rule="evenodd"
+                          d="M19.3.527a1.93 1.93 0 012.65 0l7.5 7.2a1.75 1.75 0 010 2.546l-7.5 7.2a1.93 1.93 0 01-2.65 0 1.75 1.75 0 010-2.546l4.298-4.127H1.875C.839 10.8 0 9.994 0 9s.84-1.8 1.875-1.8h21.723L19.3 3.073a1.75 1.75 0 010-2.546z"
+                          clip-rule="evenodd"
+                          opacity=".3"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="_testimonial_portfolio_card_wrap">
+              <div class="glide__track" data-glide-el="track">
+                <div class="row glide__slides">
+                  <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                    <div class="_testimonial_portfolio_card glide__slide">
+                      <div class="_testimonial_portfolio_card_inner">
+                        <div class="_testimonial_portfolio_card_ic">
+                          <img
+                            src="assets/img/story-heart1.svg"
+                            alt="icon"
+                            class="_testimonial_portfolio_card_img"
+                          />
+                        </div>
+                        <div class="_testimonial_portfolio_card_cont">
+                          <p class="_testimonial_portfolio_card_cont_para">
+                            Turja is a very hard working and talented designer.
+                            He quickly responds to feedback and adjusts designs
+                            accordingly. His designs are beautiful. Will be
+                            working with him a lot in the future
+                          </p>
+                        </div>
+                        <div class="_testimonial_portfolio_card_info">
+                          <div class="_testimonial_portfolio_card_info_ic">
+                            <img
+                              src="assets/img/customer-ic1.svg"
+                              alt="iocn"
+                              class="_testimonial_portfolio_card_info_icon"
+                            />
+                          </div>
+                          <div class="_testimonial_portfolio_card_info_cont">
+                            <h6
+                              class="_testimonial_portfolio_card_info_cont_txt"
+                            >
+                              Justin Pierre
+                            </h6>
+                            <p
+                              class="_testimonial_portfolio_card_info_cont_para"
+                            >
+                              User Interface designer
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                    <div class="_testimonial_portfolio_card glide__slide">
+                      <div class="_testimonial_portfolio_card_inner">
+                        <div class="_testimonial_portfolio_card_ic">
+                          <img
+                            src="assets/img/story-heart2.svg"
+                            alt="icon"
+                            class="_testimonial_portfolio_card_img"
+                          />
+                        </div>
+                        <div class="_testimonial_portfolio_card_cont">
+                          <p class="_testimonial_portfolio_card_cont_para">
+                            Reliable, hard-working and easy to get along with.
+                            Listens to your design needs and translates them
+                            into beautiful products. I would highly recommend
+                            Turja to anyone.
+                          </p>
+                        </div>
+                        <div class="_testimonial_portfolio_card_info">
+                          <div class="_testimonial_portfolio_card_info_ic">
+                            <img
+                              src="assets/img/customer-ic1.svg"
+                              alt="iocn"
+                              class="_testimonial_portfolio_card_info_icon"
+                            />
+                          </div>
+                          <div class="_testimonial_portfolio_card_info_cont">
+                            <h6
+                              class="_testimonial_portfolio_card_info_cont_txt"
+                            >
+                              Maher zain
+                            </h6>
+                            <p
+                              class="_testimonial_portfolio_card_info_cont_para"
+                            >
+                              User Interface designer
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                    <div class="_testimonial_portfolio_card glide__slide">
+                      <div class="_testimonial_portfolio_card_inner">
+                        <div class="_testimonial_portfolio_card_ic">
+                          <img
+                            src="assets/img/story-heart3.svg"
+                            alt="icon"
+                            class="_testimonial_portfolio_card_img"
+                          />
+                        </div>
+                        <div class="_testimonial_portfolio_card_cont">
+                          <p class="_testimonial_portfolio_card_cont_para">
+                            Great freelance designer that we will happily work
+                            with in the future. He will not stop until the
+                            customer is happy which is just what we were looking
+                            for!
+                          </p>
+                        </div>
+                        <div class="_testimonial_portfolio_card_info">
+                          <div class="_testimonial_portfolio_card_info_ic">
+                            <img
+                              src="assets/img/customer-ic1.svg"
+                              alt="iocn"
+                              class="_testimonial_portfolio_card_info_icon"
+                            />
+                          </div>
+                          <div class="_testimonial_portfolio_card_info_cont">
+                            <h6
+                              class="_testimonial_portfolio_card_info_cont_txt"
+                            >
+                              Leo Smith
+                            </h6>
+                            <p
+                              class="_testimonial_portfolio_card_info_cont_para"
+                            >
+                              User Interface designer
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---testimonial portfolio wrapper end-->
+    <!--newsletter portfolio wrapper -->
+    <div class="container" id="contact">
+      <div class="contain">
+        <div class="wrapper">
+          <div class="form">
+            <h4>GET IN TOUCH</h4>
+            <h2 class="form-headline mb-3">Send me a message</h2>
+            <form id="submit-form" action="">
+              <p>
+                <input
+                  id="name"
+                  class="form-input"
+                  type="text"
+                  placeholder="Your Name*"
+                />
+                <small class="name-error"></small>
+              </p>
+              <p>
+                <input
+                  id="email"
+                  class="form-input"
+                  type="email"
+                  placeholder="Your Email*"
+                />
+                <small class="name-error"></small>
+              </p>
+
+              <p class="full-width">
+                <textarea
+                  minlength="20"
+                  id="message"
+                  cols="30"
+                  rows="7"
+                  placeholder="Your Message*"
+                  required
+                ></textarea>
+                <small></small>
+              </p>
+
+              <p class="full-width">
+                <input
+                  type="submit"
+                  class="submit-btn"
+                  value="Send"
+                  onclick="checkValidations()"
+                />
+              </p>
+            </form>
+          </div>
+
+          <div class="contacts contact-wrapper">
+            <ul>
+              <li>209/1,Bagbari,Sylhet</li>
+
+              <span class="hightlight-contact-info">
+                <li class="email-info mb-3">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  turjoui01@gmail.com
+                </li>
+                <li>
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span class="highlight-text mt-3">+8801729430317</span>
+                </li>
+              </span>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--newsletter portfolio wrapper end -->
+    <!--footer portfolio wrapper -->
+    <footer class="_footer_portfolio_wrapper">
+      <div class="_footer_portfolio_wrap">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <div class="_footer_portfolio">
+                <div class="_footer_portfolio_shape">
+                  <img
+                    src="assets/img/footer-shape.svg"
+                    alt="icon"
+                    class="_footer_portfolio_shape_ic"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-9 col-lg-9 col-md-12 c0l-sm-12 mx-auto">
+                  <div class="row justify-content-center">
+                    <div class="col-xl-5 col-lg-4 col-md-6 c0l-sm-12">
+                      <div class="_footer_portfolio_cont">
+                        <h6 class="_footer_portfolio_cont_txt">About Me</h6>
+                        <p class="_footer_portfolio_cont_para">
+                          Welcome to Marc Jacobs We Want our monthly roundup of
+                          new releases and undisputed favorites.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 c0l-sm-12">
+                      <div class="_footer_portfolio_cont">
+                        <h6 class="_footer_portfolio_cont_txt">Newsletter</h6>
+                        <p class="_footer_portfolio_cont_para1">
+                          Stay updated with our latest trends
+                        </p>
+                        <div class="_footer_portfolio_cont_subscribe">
+                          <form class="_footer_portfolio_cont_subscribe_form">
+                            <input
+                              type="text"
+                              class="_footer_portfolio_cont_input"
+                              placeholder="Enter email address"
+                            />
+                            <button
+                              type="button"
+                              class="_footer_portfolio_cont_subscribe_btn"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="none"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  fill="#000"
+                                  fill-rule="evenodd"
+                                  d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L8.586 7H5a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                                  clip-rule="evenodd"
+                                />
+                              </svg>
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 c0l-sm-12">
+                      <div class="_footer_portfolio_cont">
+                        <h6 class="_footer_portfolio_cont_txt">Follow Me</h6>
+                        <div class="_footer_portfolio_cont_nav">
+                          <p class="_footer_portfolio_cont_para1">
+                            Let us be social
+                          </p>
+                          <ul class="_footer_portfolio_cont_nav_ul">
+                            <li class="_footer_portfolio_cont_nav_li">
+                              <a
+                                href="https://mobile.twitter.com/turjosendas1"
+                                class="_footer_portfolio_cont_nav_anchor"
+                              >
+                                <span
+                                  class="_footer_portfolio_cont_nav_anchor_sp"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="15"
+                                    height="13"
+                                    fill="none"
+                                    viewBox="0 0 15 13"
+                                  >
+                                    <path
+                                      fill="#000"
+                                      d="M13.047 2.698c.63-.376 1.1-.969 1.325-1.667a6.035 6.035 0 01-1.914.73 3.02 3.02 0 00-5.14 2.751 8.56 8.56 0 01-6.212-3.15 3.02 3.02 0 00.933 4.025A3.004 3.004 0 01.674 5.01v.037a3.017 3.017 0 002.418 2.957 3.02 3.02 0 01-1.361.052 3.02 3.02 0 002.816 2.093 6.049 6.049 0 01-3.744 1.29c-.24 0-.481-.013-.72-.04a8.534 8.534 0 004.622 1.354 8.52 8.52 0 008.568-8.969c.59-.426 1.1-.955 1.505-1.56a6.027 6.027 0 01-1.731.474z"
+                                    />
+                                  </svg>
+                                </span>
+                              </a>
+                            </li>
+                            <li class="_footer_portfolio_cont_nav_li">
+                              <a
+                                href="https://www.facebook.com/turjosendas.partho/"
+                                class="_footer_portfolio_cont_nav_anchor"
+                              >
+                                <span
+                                  class="_footer_portfolio_cont_nav_anchor_sp"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="18"
+                                    height="17"
+                                    fill="none"
+                                    viewBox="0 0 18 17"
+                                  >
+                                    <path
+                                      fill="#000"
+                                      d="M2.269 8.432a7.028 7.028 0 005.927 6.94v-4.91H6.413v-2.03h1.785V6.886a2.478 2.478 0 012.65-2.74c.528.009 1.053.056 1.574.14v1.728h-.888a1.016 1.016 0 00-1.144 1.098v1.32h1.947l-.311 2.03H10.39v4.91a7.025 7.025 0 10-8.121-6.94z"
+                                    />
+                                  </svg>
+                                </span>
+                              </a>
+                            </li>
+                            <li class="_footer_portfolio_cont_nav_li">
+                              <a
+                                href="https://www.linkedin.com/in/turjo-sen-das-partho-ba7a681a0/"
+                                class="_footer_portfolio_cont_nav_anchor"
+                              >
+                                <span
+                                  class="_footer_portfolio_cont_nav_anchor_sp"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="18"
+                                    height="17"
+                                    fill="none"
+                                    viewBox="0 0 18 17"
+                                  >
+                                    <path
+                                      fill="#000"
+                                      d="M14.317 14.748H3.974a1.146 1.146 0 01-1.145-1.146V3.258c0-.632.513-1.144 1.145-1.145h10.343c.632 0 1.145.513 1.146 1.145v10.344c0 .632-.513 1.145-1.146 1.146zM5.403 6.793l-.272 1.005h.898l-.58 2.364a2.833 2.833 0 00-.07.57 1.014 1.014 0 001.138 1.113 1.804 1.804 0 001.533-.992l-.23.913h1.273l.726-2.909c.182-.745.542-1.124 1.067-1.124a.637.637 0 01.682.691c.002.139-.018.276-.06.408l-.37 1.34c-.054.185-.081.377-.08.57a1.04 1.04 0 001.159 1.1c.723 0 1.228-.492 1.501-1.462l-.496-.192c-.194.554-.401.824-.633.824-.17 0-.258-.117-.258-.34.005-.117.022-.232.052-.345l.366-1.306c.082-.268.125-.547.126-.829a1.335 1.335 0 00-1.303-1.482 2.2 2.2 0 00-1.69 1.237l.253-1.136H8.176l-.275.984h.91l-.563 2.24c-.196.55-.7.931-1.282.971a.359.359 0 01-.065-.005c-.17-.04-.27-.105-.27-.317.004-.176.03-.35.078-.519l.854-3.372h-2.16zm1.648-2.221a.766.766 0 100 1.531v-.017a.777.777 0 00.548-.22.749.749 0 00.223-.539.765.765 0 00-.771-.755z"
+                                    />
+                                  </svg>
+                                </span>
+                              </a>
+                            </li>
+                            <li class="_footer_portfolio_cont_nav_li">
+                              <a
+                                href="https://dribbble.com/turjasen"
+                                target="_blank"
+                                class="_footer_portfolio_cont_nav_anchor"
+                              >
+                                <span
+                                  class="_footer_portfolio_cont_nav_anchor_sp"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="18"
+                                    height="17"
+                                    fill="none"
+                                    viewBox="0 0 18 17"
+                                  >
+                                    <path
+                                      fill="#000"
+                                      d="M9.008 15.455a7.025 7.025 0 117.025-7.025 7.033 7.033 0 01-7.025 7.025zM5.58 13.028l-.004.007a5.724 5.724 0 005.577.726 24.255 24.255 0 00-1.18-4.2A8.878 8.878 0 006.78 11.51c-.45.426-.84.912-1.16 1.445l-.004.008v-.007l-.013.024-.008.014-.005.01-.012.025.002-.001zm6.785-3.864c-.346 0-.691.024-1.034.07.447 1.251.8 2.534 1.054 3.838a5.656 5.656 0 002.262-3.602 8.564 8.564 0 00-2.282-.308v.002zm-9.106-.766v.04a5.747 5.747 0 001.352 3.698A9.5 9.5 0 019.37 8.36l.083-.024a18.05 18.05 0 00-.357-.749c-1.875.526-3.81.798-5.757.811h-.079zm8.886-.425c.872.003 1.742.082 2.6.237a5.694 5.694 0 00-1.19-3.273 8.284 8.284 0 01-3.09 2.167l.02-.009-.022.01a16.518 16.518 0 01.385.866l.029.07c.421-.047.844-.07 1.268-.068zM6.463 3.286A5.745 5.745 0 003.42 7.089a22.134 22.134 0 004.857-.617h.02l.007-.009.038-.01h.004l.028-.005h.012l.014-.004.029-.007.016-.007.015-.004h.014a36.388 36.388 0 00-2.013-3.14zm2.545-.59a5.928 5.928 0 00-1.146.11 32.072 32.072 0 012.022 3.18 6.79 6.79 0 002.836-1.928 5.755 5.755 0 00-3.712-1.361z"
+                                    />
+                                  </svg>
+                                </span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-11 col-lg-11 col-md-12 col-sm-12 me-auto">
+              <div class="_footer_portfolio_copyright">
+                <p class="_footer_portfolio_copyright_para">
+                  Copyright © 2021 All rights reserved This template is made
+                  with by Turja
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--footer portfolio wrapper end -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/glide.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
